@@ -1,0 +1,156 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+//   position: relative;
+//   box-sizing: border-box;
+// }
+
+// body {
+//   background-color: rgb(21, 3, 34);
+//   transform-style: preserve-3d;
+//   perspective: 2000px;
+//   overflow: hidden;
+//   height: 100vh;
+//   background-image: linear-gradient(transparent, hsla(0, 80, 60, 0.3));
+//   background-repeat: no-repeat;
+// }
+
+.bolts {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  /* outline: 1px solid red; */
+  transform-origin: 50% 50%;
+  animation: rotX 10s linear infinite alternate;
+  height: 0;
+  padding-top: 35%;
+
+  // transform: translateX(10%) rotateY(35deg) rotate(15deg) rotateX(0deg);
+}
+
+.bolt {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: center center;
+  /* outline: 1px solid red; */
+  filter: blur(3px);
+}
+
+.rotate {
+  transform: translateX(-35%) translateY(-70%) rotateY(0deg) rotate(40deg)
+    rotateX(0deg) scale(40%);
+
+  @media screen and (max-width: 375px) {
+    transform: translateX(0%) translateY(-70%) rotateY(0deg) rotate(40deg)
+      rotateX(0deg) scale(50%);
+  }
+}
+
+// http://browserhacks.com/#hack-8a0d11a6b2e3d172711eed35cb7237b9
+// Chrome on windows had clipping when blur was enabled :(
+@supports (-webkit-appearance: none) {
+  .bolt {
+    filter: none;
+  }
+}
+
+@for $i from 1 through 7 {
+  .bolt:nth-child(#{$i}) {
+    animation-name: bolt0#{$i};
+    transform: rotateX(#{15 * $i}deg);
+  }
+}
+
+.bolt img {
+  width: 100%;
+  max-width: 100%;
+}
+
+@keyframes bolt01 {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+}
+@keyframes bolt02 {
+  5% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+@keyframes bolt03 {
+  15% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@keyframes bolt04 {
+  30% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+}
+@keyframes bolt05 {
+  45% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+}
+@keyframes bolt06 {
+  60% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+}
+@keyframes bolt07 {
+  75% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+// @keyframes rotX {
+//   100% {
+//     transform: translateX(10%) rotateY(35deg) rotate(15deg) rotateX(-360deg);
+//   }
+//   100% {
+//     transform: rotateX(-360deg);
+//   }
+// }

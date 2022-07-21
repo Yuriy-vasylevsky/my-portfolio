@@ -1,0 +1,32 @@
+.main {
+  //   position: relative;
+  //   z-index: 100;
+  //   background-image: url('');
+  //   background-position-y: 1700px;
+  //   background-repeat: no-repeat;
+}
+
+.bg_image {
+  position: relative;
+}
+
+.bg_image img {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  animation: scroll 500ms forwards;
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(300px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

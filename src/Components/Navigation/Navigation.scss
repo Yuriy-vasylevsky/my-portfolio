@@ -1,0 +1,24 @@
+.nav-link {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #583d72;
+}
+
+.nav-link.active {
+  color: #583d72;
+}
+.site_nav {
+  display: flex;
+}

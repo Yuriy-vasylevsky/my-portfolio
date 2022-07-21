@@ -1,0 +1,23 @@
+.social {
+}
+
+.social_btn {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: transparent;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.5;
+  text-decoration-line: underline;
+  margin-right: 40px;
+  transition: color linear 1s;
+}
+
+.social_btn:hover,
+.social_btn:focus {
+  background: #583d72;
+}
