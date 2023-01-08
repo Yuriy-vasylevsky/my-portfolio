@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import contextNav from '../../context/contextNav';
 import { useContext } from 'react';
-import Scroll from '../Scroll/Scroll';
+// import Scroll from '../Scroll/Scroll';
 export default function HeroAnimation3() {
   // const [stepAnimation1, setStepAnimation1] = useState(false);
   // const [stepAnimation2, setStepAnimation2] = useState(false);

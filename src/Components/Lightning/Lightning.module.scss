@@ -43,7 +43,7 @@
 }
 
 .rotate {
-  transform: translateX(-30%) translateY(-60%) rotateY(0deg) rotate(115deg)
+  transform: translateX(0%) translateY(-60%) rotateY(0deg) rotate(115deg)
     rotateX(0deg) scale(70%);
 
   @media screen and (max-width: 375px) {
